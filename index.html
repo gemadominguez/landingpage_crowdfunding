@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3OfLife es una organización sin fines de lucro dedicada a combatir el cambio climático mediante la plantación de árboles.">
+    <title>TreeOfLife</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+    </style>
+
+</head>
+<body>
+    <img src="imagenes/iconos/arrow_up.svg" alt="boton ir arriba" id="back-to-top" class="back-to-top">
+    <header class="cabecera_principal" id="home">    
+        
+        <section class="escena">
+            
+            <!-- Navegación -->
+            <nav class="menu_principal">
+                <ul>
+                    <img class="menu_hamburguesa" src="imagenes/iconos/menu.svg" alt="icono menu">
+                    <li><a href="#seccion_1">About</a></li> 
+                    <li><a href="#" class="enlace-donativo">Donate</a></li>
+                    <li><p class="logo">3ofLIFE</p></li> 
+                    <li><a href="#seccion_2">Collaborate</a></li>
+                    <li><a href="#seccion_4">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <!-- Navegación para pantallas pequeñas -->
+            <nav class="menu_desplegado">
+                <ul>
+                    <li><a href="#seccion_1">About</a></li> 
+                    <li><a href="#" class="enlace-donativo">Donate</a></li>
+                    <li><a href="#seccion_2">Collaborate</a></li>
+                    <li><a href="#seccion_4">FAQ</a></li>
+
+                    <button class="cerrar">
+                        <p>close</p>
+                    </button>
+                </ul>
+            </nav>
+
+            <!-- Progress bar -->
+            <div class="contenedor-donut">
+            
+                <svg id="svgDonut" viewBox="0 0 989 755" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base Path (contorno) -->
+                    <path id="pathBase" d="M902.273 752.264C907.917 755.831 915.397 754.154 918.825 748.426C962.145 676.037 986.26 593.704 988.78 509.248C991.42 420.76 970.257 333.186 927.501 255.668C884.744 178.151 821.962 113.533 745.709 68.5606C669.456 23.5882 582.528 -0.0891957 494 0.000252421C405.473 0.0897005 318.593 23.9428 242.431 69.0691C166.269 114.195 103.617 178.94 61.0174 256.544C18.4176 334.148 -2.56824 421.764 0.250776 510.247C2.94136 594.698 27.2231 676.982 70.6886 749.283C74.1284 755.004 81.6124 756.666 87.2484 753.087V753.087C92.8843 749.509 94.5374 742.046 91.1048 736.32C49.9552 667.676 26.9676 589.602 24.4148 509.477C21.7337 425.32 41.6935 341.987 82.2106 268.178C122.728 194.368 182.316 132.789 254.755 89.8686C327.193 46.9485 409.826 24.2616 494.025 24.1766C578.224 24.0915 660.902 46.6113 733.427 89.385C805.952 132.159 865.665 193.617 906.331 267.345C946.997 341.073 967.126 424.365 964.614 508.527C962.224 588.657 939.394 666.777 898.383 735.504C894.962 741.237 896.63 748.696 902.273 752.264V752.264Z" fill="none" stroke="white" stroke-width="2"/>
+            
+                    <!-- Mask para el Relleno Progresivo -->
+                    <mask id="maskFill">
+                        <rect x="0" y="0" width="100%" height="100%" fill="white" id="maskFillRect" />
+                    </mask>
+            
+                    <!-- Path de Relleno con máscara aplicada -->
+                    <path id="pathFill" d="M902.273 752.264C907.917 755.831 915.397 754.154 918.825 748.426C962.145 676.037 986.26 593.704 988.78 509.248C991.42 420.76 970.257 333.186 927.501 255.668C884.744 178.151 821.962 113.533 745.709 68.5606C669.456 23.5882 582.528 -0.0891957 494 0.000252421C405.473 0.0897005 318.593 23.9428 242.431 69.0691C166.269 114.195 103.617 178.94 61.0174 256.544C18.4176 334.148 -2.56824 421.764 0.250776 510.247C2.94136 594.698 27.2231 676.982 70.6886 749.283C74.1284 755.004 81.6124 756.666 87.2484 753.087V753.087C92.8843 749.509 94.5374 742.046 91.1048 736.32C49.9552 667.676 26.9676 589.602 24.4148 509.477C21.7337 425.32 41.6935 341.987 82.2106 268.178C122.728 194.368 182.316 132.789 254.755 89.8686C327.193 46.9485 409.826 24.2616 494.025 24.1766C578.224 24.0915 660.902 46.6113 733.427 89.385C805.952 132.159 865.665 193.617 906.331 267.345C946.997 341.073 967.126 424.365 964.614 508.527C962.224 588.657 939.394 666.777 898.383 735.504C894.962 741.237 896.63 748.696 902.273 752.264V752.264Z" fill="white" mask="url(#maskFill)" stroke="none"/>
+                </svg>
+            </div>
+      
+
+            <!-- Formulario donativo -->
+            <form class="donativo" action="#" method="POST" novalidate>
+
+                <header>
+                    <h3>Plant a tree</h3>
+                    <p> By donating to plant a tree, you’re helping to create a greener, healthier future for generations to come.</p>
+                </header>
+                <div class="input-datos">
+                    <div class="error"></div>
+                    <input type="text" id="name" name="name" placeholder="Your name"  autocomplete="name" required>
+                </div>
+                
+                <div class="input-datos">
+                    <div class="error"></div>
+                    <input type="email" id="email" name="email" placeholder="email"  autocomplete="email" required>
+                </div>
+                
+            
+                <div class="selector-precio">
+                    <div id="price-error" class="error"></div> 
+                    <label for="price-5">Donation Amount:</label>
+                        <div class="opciones-precio">
+                            <label class="price">
+                                <input type="radio" id="price-5" name="price" value="5"> €5
+                            </label>
+                            <label class="price">
+                                <input type="radio" id="price-10" name="price" value="10"> €10
+                            </label>
+                            <label class="price">
+                                <input type="radio" id="price-20" name="price" value="20"> €20
+                            </label>
+                            <label class="price">
+                                <input type="radio" id="price-50" name="price" value="50"> €50
+                            </label>
+                            <label class="price">
+                                <input type="radio" id="price-100" name="price" value="100"> €100
+                            </label>
+      
+                        </div>
+
+
+                    <div class="selector-pago">
+                        <div id="payment-error" class="error"></div>
+                        <label for="method-2">Payment method:</label>
+                        <div class="opciones-pago">
+                            <label class="method">
+                                <input type="radio" id="method-1" name="method-1" value="credit-card"> Credit Card
+                            </label>
+                            <label class="method">
+                                <input type="radio" id="method-2" name="method-2" value="paypal"> Paypal
+                            </label>
+                        </div>
+                        
+                    </div>
+
+                    <label class="consent">
+                       <input type="checkbox" name="consent" value="credit-card"> I would like to receive occasional updates via email
+                    </label>
+                    <div class="contenedor-botones">
+                        <button class="button-primary" id="send"  type="submit">send donation</button>
+                        <button class="button-tertiary "id="cancel" type="reset">cancel</button>
+                    </div>
+                    
+                </div>
+            </form>
+            
+            
+          
+            
+
+            <!-- Diseño fondo -->
+            <div class="fondo"></div>
+            <div class="capa-luz"></div>
+            <div class="grain"></div>  
+            <div class="estrellas"></div>
+
+            <!-- COUNTDOWN -->
+            <div id="countdown" class="countdown">
+                <div class="time">
+                    <h4 id="days">00</h4>
+                    <p>days</p>
+                </div>
+                <div class="time">
+                    <h4 id="hours">00</h4>
+                    <p>hours</p>
+                </div>
+                <div class="time">
+                    <h4 id="minutes">00</h4>
+                    <p>minutes</p>
+                </div>
+                <div class="time">
+                    <h4 id="seconds">00</h4>
+                    <p>seconds</p>
+                </div>
+             </div>
+
+            <!-- Diseño imagen principal -->
+            <div class="hojas"></div>
+            <img src="imagenes/arbol.png" alt="Arbol" id="arbol">
+            <div class="fondo-multiplicar"></div> 
+            <div class="fondo-screen"></div> 
+            <div class="fondo-screen2"></div>
+      
+            <div class="ondas">
+                <span style="--i:0;"></span>
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+       
+
+            <!-- Filtro SVG -->
+            <svg width="0" height="0" style="position: absolute;">
+                <filter id="ruido">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="4" stitchTiles="stitch" />
+                    <feColorMatrix type="saturate" values="0" />
+                </filter>
+            </svg>
+
+            
+        
+            <div id="boton_principal">
+                <h1>A Thousand Trees, A Better Future</h1>
+                <button class="ButtonPlantTree">plant a tree</button>
+                
+            </div>
+            
+        </section>
+
+
+    </header>
+
+    
+    <main>
+        <div class="circulo circulo-1"></div>
+        <div class="circulo circulo-2"></div>
+        <div class="circulo circulo-3"></div>
+          
+            <section id="seccion_1">
+          
+            
+                <div class="contenedor-articulos">
+                    <article class="articulo_1">
+                        <header>
+                            <h5>About us</h5>
+                            <h2>Why Plant a Tree?</h2>
+                        </header>
+                        <p>TreeOfLife is a non-profit organization dedicated to combating climate change through tree planting. Founded with the mission of creating a greener and more sustainable future, we focus on restoring terrestrial ecosystems and fighting deforestation. In line with the United Nations' 2030 Agenda for Sustainable Development, we particularly emphasize SDG 13 (Climate Action) and SDG 15 (Life on Land). Through our initiatives, we aim to make a positive environmental impact and support communities, helping to create a healthier planet for future generations.</p>
+                    </article>
+
+                    <article class="articulo_2">
+                            
+                                <div class="contenedor-externo">
+                                    <div class="contenedor-scroll">
+
+                                        <div class="carrusel">
+                                       
+                                            <div class="cards">
+                                                <img src="imagenes/iconos/tree_icon.png" alt="ilustración vectorial arbol" class="iconos_tarjetas">
+                                                <h4>Reduction of CO₂</h4>
+                                                <p>A mature tree can absorb between 10 and 40 kg of CO₂ per year and up to 1 ton of CO₂ throughout its lifetime.</p>
+                                            </div>
+                                            <div class="cards">
+                                                <img src="imagenes/iconos/water_icon.png" alt="ilustración vectorial gota agua" class="iconos_tarjetas">
+                                                <h4>Water Cycle</h4>
+                                                <p>Trees help retain up to 100,000 liters of water per year, preventing droughts and recharging aquifers</p>
+                                            </div>
+                                            <div class="cards">
+                                                <img src="imagenes/iconos/dust_icon.png" alt="ilustración vectorial polvo" class="iconos_tarjetas">
+                                                <h4>Improved Air Quality</h4>
+                                                <p>An urban tree can filter up to 20 kg of pollutants annually, including harmful particles and gases like sulfur dioxide.</p>
+                                            </div>
+                                            <div class="cards">
+                                                <img src="imagenes/iconos/mountain_icon.png" alt="ilustración vectorial montaña" class="iconos_tarjetas">
+                                                <h4>Natural Protection</h4>
+                                                <p>Trees reduce flood risks by absorbing and slowing down up to 30% of rainfall, acting as natural sponges.</p>
+                                            </div>
+                                            <div class="cards">
+                                                <img src="imagenes/iconos/people_icon.png" alt="ilustración vectorial silueta persona" class="iconos_tarjetas">
+                                                <h4>Mental Health</h4>
+                                                <p>People living near green areas are 20% less likely to suffer from anxiety or depression</p>
+                                            </div>
+                                            
+                                            <div class="cards">
+                                                <img src="imagenes/iconos/bunny_icon.png" alt="ilustración vectorial silueta persona" class="iconos_tarjetas">
+                                                <h4>Biodiversity </h4>
+                                                <p>Forests are home to 80% of terrestrial species, including endangered animals.</p>
+                                            </div>
+                                            <div class="cards">
+                                                <img src="imagenes/iconos/rain_icon.png" alt="ilustración vectorial silueta persona" class="iconos_tarjetas">
+                                                <h4>Climate Regulation</h4>
+                                                <p>Tropical forests generate more than 40% of global rainfall, helping stabilize weather patterns.</p>
+                                            </div>
+                                            <div class="cards">
+                                                <img src="imagenes/iconos/local_icon.png" alt="ilustración vectorial silueta persona" class="iconos_tarjetas">
+                                                <h4>Local economies</h4>
+                                                <p>Planting trees promotes sustainability and environmental health, driving long-term economic growth. Our NGO supports these efforts.</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                      
+                      
+                    </article>
+
+                    <div class="container">
+                        <button class="flechas-boton" id="flecha-izquierda">
+                            <img  class="flecha-icono" src="imagenes/iconos/arrow_left.svg" alt="flecha izquierda">
+                        </button>
+                        <button class="flechas-boton" id="flecha-derecha">
+                            <img class="flecha-icono" src="imagenes/iconos/arrow_right.svg" alt="flecha derecha">
+                        </button>
+    
+                     </div>
+                </div>
+            </section>
+            
+            
+        
+
+        <section id="seccion_2">
+            <div class="centrar_seccion">
+                <figure>
+                    <img src="imagenes/bosque.png" alt="bosque">
+                </figure>
+                <article>
+                    <div class="arriba">
+                            <header>
+                                <h5>Collaborate</h5>
+                                <h2>Together, <br> We Grow Change</h2>
+                            </header>
+                            
+                            <div id="datos">
+                                <div class="fila_datos">
+                                    <div class="contenedor_datos">
+                                       <h2>56,780</h2>
+                                        <p>trees planted</p>
+                                    </div>
+                                    <div class="contenedor_datos">
+                                        <h2>200,000</h2>
+                                        <p>liters of water conserved</p>
+                                    </div>
+                                </div>
+                                <div class="fila_datos">
+                                    <div class="contenedor_datos">
+                                        <h2>350</h2>
+                                        <p>hectares reforested</p>
+                                    </div>
+                                    <div class="contenedor_datos">
+                                        <h2>12,000</h2>
+                                        <p>volunteers mobilized</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                    <div class="abajo">
+                            <p>
+                                Join TreeOfLife in restoring ecosystems and promoting biodiversity. Every tree we plant helps create a healthier planet and combats climate change. Your support, whether through volunteering or donating, makes a real difference. Get involved today and be part of the movement to protect and restore our world for future generations!
+
+                            </p>
+                            <div class="button-container">
+                                <button class="button-secondary">become a volunteer</button>
+                                
+                            
+
+                                <button class="ButtonPlantTree button-primary">plant a tree</button>
+
+                            </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="seccion_3">
+            <article class="articulo_1">
+                <header>
+                    <h5>Our collaborators</h5>
+                    <h2>They work with us</h2>
+                </header>
+                <p>Behind every tree we plant is a network of organizations making it possible. We partner with global NGOs to restore forests, combat climate change, and create a sustainable future. Discover the partners helping us grow this mission.</p>
+            </article>
+
+            <article class="articulo_2">
+                <div>
+                    <img src="imagenes/logo1.png" alt="logo de WWF">
+                    <img src="imagenes/logo2.png" alt="logo de Rainforest Alliance">
+                    <img src="imagenes/logo3.png" alt="logo de Ecosia">
+                    <img src="imagenes/logo4.png" alt="logo de Arbor Day Foundation">
+                    <img src="imagenes/logo5.png" alt="logo de Plant For The Planet">
+                </div>
+            </article>
+
+        </section>
+
+        
+        <div class="fondo_footer">
+            <section id="seccion_4">
+                <div class="centrar_seccion">
+                    <div class="contenedor_articulos">
+                        <article class="articulo_1">
+                            <div class="faq_container">
+                                <button id="question_1" class="question">
+                                <p>How is my donation use?</p>
+                                <img src="imagenes/iconos/arrow.svg" alt="flecha hacia abajo">
+                                </button>
+                                <div id="answer_1" class="answer">
+                                    <p>Your donation is carefully allocated to cover tree planting, project maintenance, and a small portion for essential administrative costs to ensure sustainability.</p>
+                                </div>
+                            </div>
+                            <div class="faq_container">
+                                <button id="question_2" class="question">
+                                <p>Where are the trees planted?</p>
+                                <img src="imagenes/iconos/arrow.svg" alt="flecha hacia abajo">
+                                </button>
+                                <div id="answer_2" class="answer">
+                                    <p>Trees are planted in areas affected by deforestation, degraded lands, or regions in need of restoration, carefully chosen for their ecological impact and restoration potential.</p>
+                                </div>
+                            </div>
+                            <div class="faq_container">
+                                <button id="question_3" class="question">
+                                <p>How can I be sure the trees are actually planted?</p>
+                                <img src="imagenes/iconos/arrow.svg" alt="flecha hacia abajo">
+                                </button>
+                                <div id="answer_3" class="answer">
+                                    <p>Transparency is ensured through periodic updates, images, videos, and reports, and we partner with trusted NGOs that monitor the progress.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq_container">
+                                <button id="question_4" class="question">
+                                <p>Can I participate directly in planting the trees?</p>
+                                <img src="imagenes/iconos/arrow.svg" alt="flecha hacia abajo">
+                                </button>
+                                <div id="answer_4" class="answer">
+                                    <p>Yes, you can actively participate in tree planting events. Visit the <a href="#seccion_2">Collaborate</a> section on our website, specifically the "Become a Volunteer" category, to learn about our activities, calendar, and how to become a member.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+                        <article class="articulo_2">
+                            <header>
+                                <h5>faq</h5>
+                                <h2>More Questions?<br>Talk with us</h2>
+                            </header>
+                            <p>We’re here to help! If you couldn’t find the answer you were looking for in our FAQ section, don’t hesitate to get in touch with us. Our dedicated team is here to assist you with any questions, concerns, or additional information you might need. We’re happy to support you every step of the way!</p>
+                            <div class="phone">
+                                <h4>Phone</h4>
+                                <h4>|</h4>
+                                <h4>933 043 295</h4>
+                            </div>
+                            <div class="email">
+                                <h4>Email</h4>
+                                <h4>|</h4>
+                                <h4>3oflife@contact.com</h4>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="centrar_seccion">
+
+            <p>© 2025 3ofLIFE, Inc. All rights reserved </p>
+            <nav>
+                <ul>
+                    <li><a href="#home" target="_blank">Home</a></li>
+                    <li><a href="#seccion_1">About</a></li> 
+                    <li><a href="#" class="enlace-donativo">Donate</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="rss">
+                <img src="imagenes/iconos/instagram.png" alt="icono_redes_sociales">
+                <img src="imagenes/iconos/tiktok.png" alt="icono_redes_sociales">
+                <img src="imagenes/iconos/x.png" alt="icono_redes_sociales">
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
