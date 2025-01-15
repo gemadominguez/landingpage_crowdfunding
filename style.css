@@ -1682,6 +1682,72 @@ footer{
 
 }
 
+@media screen and (max-width:430px ){
+   #boton_principal {
+    top: 39%;
+   
+        button {
+            width: 300px;
+
+        }
+    }   
+
+    .donativo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+
+    
+    
+        header{
+            padding-bottom: 18px;
+        }
+    
+        h3{
+            padding-bottom: 8px;
+        }
+    
+    }
+
+    .input-datos {
+        margin-bottom: 8px;
+    
+        input {
+            padding: 16px; 
+        }
+        
+    }
+
+
+    .selector-precio {
+        padding-top: 12px;
+
+
+
+        label {
+            margin-bottom: 2px;
+            padding-bottom: 8px;
+
+        }
+
+        .opciones-precio, .opciones-pago {
+            gap: 20px;
+            align-items: center;
+        }
+        
+    }
+
+    .selector-pago{
+        padding-bottom: 20px;
+        padding-top: 12px;
+    }
+
+    
+}
+
+
+
 
 /* -------- MEDIA QUERIES (ALTURA) ------------- */
 
@@ -1747,7 +1813,6 @@ footer{
 
 
 }
-
 
 
 
@@ -1835,5 +1900,23 @@ footer{
 
 
 
+
+@media screen and (max-height: 740px) {
+
+    .ondas{
+        top: calc(32% + 300px); 
+    }
+
+    #svgDonut{
+        width: 470px;
+    
+    }
+    
+    .contenedor-donut{
+        top: 44%; 
+    }
+
+
+}
 
 
